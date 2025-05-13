@@ -5,7 +5,7 @@
   "description": "AI-powered assistant that blocks distractions based on your focus goal.",
   "permissions": ["scripting", "tabs", "activeTab", "storage"],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "dist/popup.html",
     "default_icon": {
       "16": "icons/icon16.png",
       "48": "icons/icon48.png",
