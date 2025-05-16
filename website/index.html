@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stira - The Future of Innovation</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section -->
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">
+                <span class="logo-text">Stira</span>
+            </div>
+            <button class="mobile-nav-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#overview">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tech">Tech</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button></li>
+            </ul>
+        </nav>
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="#overview">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#tech">Tech</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><button class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <h1 class="gradient-text">Stira Pro</h1>
+            <p class="tagline">The future of technology is here.</p>
+            <button class="cta-button primary">Get Started</button>
+        </div>
+    </header>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="pricing-container">
+            <h2>Choose Your Plan</h2>
+            <p class="pricing-description">Get started with Stira today. Choose the plan that fits your needs.</p>
+            <div class="price-cards">
+                <div class="price-card">
+                    <div class="price-header">
+                        <h3>Free</h3>
+                        <p class="price">Free Forever</p>
+                        <p class="price-subtext">Perfect for individuals and small teams</p>
+                    </div>
+                    <div class="price-features">
+                        <p><i class="fas fa-check"></i> Basic Features</p>
+                        <p><i class="fas fa-check"></i> 1 Project</p>
+                        <p><i class="fas fa-check"></i> Email Support</p>
+                        <p><i class="fas fa-check"></i> Basic Analytics</p>
+                    </div>
+                    <button class="cta-button primary">Get Started</button>
+                </div>
+                <div class="price-card pro">
+                    <div class="price-header">
+                        <h3>Pro</h3>
+                        <p class="price">$9.99<span class="price-period">/month</span></p>
+                        <p class="price-subtext">Best for teams and professionals</p>
+                    </div>
+                    <div class="price-features">
+                        <p><i class="fas fa-check"></i> All Free Features</p>
+                        <p><i class="fas fa-check"></i> Unlimited Projects</p>
+                        <p><i class="fas fa-check"></i> Priority Support</p>
+                        <p><i class="fas fa-check"></i> Advanced Analytics</p>
+                        <p><i class="fas fa-check"></i> Custom Branding</p>
+                    </div>
+                    <button class="cta-button primary">Start Free Trial</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator animate"></div>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2>Get in Touch</h2>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button primary">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>International Institute of Information Technology</p>
+                        <p>Prof. C.R. Rao Road, Gachibowli</p>
+                        <p>Hyderabad 500 032, Telangana, India</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+91 9059171973</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p>contact.stira@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <div class="section-separator"></div>
+    <section class="features" id="features">
+        <div class="features-container">
+            <h2>How Stira Works</h2>
+            <div class="features-grid">
+                <!-- Step 1 -->
+                <div class="feature-item" data-step="1">
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-microphone"></i>
+                        </div>
+                        <h3>You Tell Stira What You Want</h3>
+                        <p>Open the command bar with a quick shortcut (Cmd+T), then speak or type your intent. Stira parses your natural language into context-aware actions.</p>
+                        <div class="feature-keyboard">
+                            <span class="key">⌘</span>
+                            <span class="key">T</span>
+                        </div>
+                    </div>
+                    <div class="feature-image">
+                        <div class="command-bar-placeholder"></div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="feature-item" data-step="2">
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Stira Reads Your Screen</h3>
+                        <p>Using secure AI screen analysis and DOM parsing, Stira understands what's on the page — video titles, sidebar elements, comments, articles, ads, and more.</p>
+                    </div>
+                    <div class="feature-image">
+                        <div class="screen-analysis-placeholder"></div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="feature-item" data-step="3">
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-filter"></i>
+                        </div>
+                        <h3>It Filters or Highlights</h3>
+                        <p>Want to focus? Stira hides distractions. Want to learn? Stira highlights relevant content. Want to explore a niche? Stira surfaces the most aligned results.</p>
+                    </div>
+                    <div class="feature-image">
+                        <div class="content-filter-placeholder"></div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="feature-item" data-step="4">
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h3>You Stay In Flow</h3>
+                        <p>Stira works invisibly in the background. No switching tabs. No configuration. Just results that match what you asked for.</p>
+                    </div>
+                    <div class="feature-image">
+                        <div class="flow-placeholder"></div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="feature-item" data-step="5">
+                    <div class="feature-content">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Stira Improves Over Time</h3>
+                        <p>Stira learns from your interactions and becomes smarter with every use. The more you use it, the better it gets at understanding your needs.</p>
+                    </div>
+                    <div class="feature-image">
+                        <div class="ai-learning-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- Technology Section -->
+    <section class="technology" id="tech">
+        <div class="technology-container">
+            <h2>Advanced Technology</h2>
+            <p class="tech-description">Stira is powered by cutting-edge AI and machine learning technologies designed to enhance your digital experience.</p>
+            
+            <!-- AI Architecture -->
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Architecture</h3>
+                    <p>State-of-the-art neural networks that understand context and intent in real-time.</p>
+                    <div class="tech-features">
+                        <p><i class="fas fa-check"></i> Natural Language Processing</p>
+                        <p><i class="fas fa-check"></i> Context-Aware Analysis</p>
+                        <p><i class="fas fa-check"></i> Real-Time Learning</p>
+                    </div>
+                </div>
+
+                <!-- Computer Vision -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Computer Vision</h3>
+                    <p>Advanced screen analysis and DOM parsing to understand your digital environment.</p>
+                    <div class="tech-features">
+                        <p><i class="fas fa-check"></i> Screen Content Analysis</p>
+                        <p><i class="fas fa-check"></i> Element Recognition</p>
+                        <p><i class="fas fa-check"></i> Context Detection</p>
+                    </div>
+                </div>
+
+                <!-- ML Models -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Machine Learning Models</h3>
+                    <p>Custom-trained models that adapt to your preferences and optimize over time.</p>
+                    <div class="tech-features">
+                        <p><i class="fas fa-check"></i> Personalization</p>
+                        <p><i class="fas fa-check"></i> Behavior Analysis</p>
+                        <p><i class="fas fa-check"></i> Adaptive Learning</p>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Secure Processing</h3>
+                    <p>End-to-end encryption and privacy-first design to protect your data.</p>
+                    <div class="tech-features">
+                        <p><i class="fas fa-check"></i> Local Processing</p>
+                        <p><i class="fas fa-check"></i> Data Privacy</p>
+                        <p><i class="fas fa-check"></i> Secure Connections</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Stats -->
+            <div class="performance-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Real-Time Processing</h3>
+                    <p class="stat-number">99.9%</p>
+                    <p class="stat-label">Accuracy</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Response Time</h3>
+                    <p class="stat-number">< 100ms</p>
+                    <p class="stat-label">Average</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-sync"></i>
+                    </div>
+                    <h3>Learning Rate</h3>
+                    <p class="stat-number">+5%</p>
+                    <p class="stat-label">Monthly Improvement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Stira</h3>
+                <p>Pushing the boundaries of technology.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Stira. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

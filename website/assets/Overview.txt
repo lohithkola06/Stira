@@ -1,0 +1,11 @@
+Meet Stira — AI That Understands How You Want to Use the Web
+Stira is a browser extension powered by real-time AI that helps you stay focused, learn faster, and avoid distractions — without needing to switch apps, toggle modes, or set up complicated rules.
+
+Just tell Stira what you want to do:
+
+“I want to study linear algebra.”
+“Only show NBA highlights on YouTube.”
+“Block social media for 30 minutes.”
+
+Stira instantly adapts the web to your goal.
+No overengineering. No rigid presets. Just smart, fluid support — when and where you need it.

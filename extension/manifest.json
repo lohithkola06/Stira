@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "FocusAI",
+  "name": "Stira",
   "version": "0.1",
   "description": "AI-powered assistant that blocks distractions based on your focus goal.",
   "permissions": ["scripting", "tabs", "activeTab", "storage"],

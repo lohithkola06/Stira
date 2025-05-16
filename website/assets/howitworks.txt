@@ -1,0 +1,22 @@
+Stira is built to understand, adapt, and execute — in real time.
+
+1. You Tell Stira What You Want
+Open the command bar with a quick shortcut (Cmd+T), then speak or type your intent. Stira parses your natural language into context-aware actions.
+
+2. Stira Reads Your Screen
+Using secure AI screen analysis and DOM parsing, Stira understands what’s on the page — video titles, sidebar elements, comments, articles, ads, and more.
+
+3. It Filters or Highlights Based on Your Intent
+Want to focus? Stira hides distractions.
+
+Want to learn? Stira highlights relevant content.
+
+Want to explore a niche? Stira surfaces the most aligned results.
+
+Stira adapts dynamically — no site-specific setup required.
+
+4. You Stay In Flow
+Stira works invisibly in the background. No switching tabs. No configuration. Just results that match what you asked for.
+
+5. Stira Improves Over Time
+The more you use it, the smarter it gets. It refines its understanding of your goals and becomes a seamless part of your daily browsing.
