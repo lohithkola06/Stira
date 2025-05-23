@@ -59,6 +59,31 @@ web_modules/
 
 # Microbundle cache
 .rpt2_cache/
+
+# --- Stira security additions ---
+# Environment and secrets
+.env
+.env.*
+
+# macOS metadata
+.DS_Store
+
+# Supabase/other credentials
+website/.env
+
+# Keys and credentials
+*.pem
+*.key
+*.crt
+credentials.json
+
+# Ignore asset and icon binaries
+website/assets/
+extension/icons/
+
+# Ignore any other sensitive config
+config.js
+
 .rts2_cache_cjs/
 .rts2_cache_es/
 .rts2_cache_umd/
@@ -72,12 +97,6 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variable files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
 
 # parcel-bundler cache (https://parceljs.org/)
 .cache

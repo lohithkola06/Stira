@@ -1,36 +1,17 @@
 :root {
-    --bg-light: #ffffff;
-    --text-light: #1d1d1f;
-    --accent-light: #007AFF;
-    --bg-dark: #1d1d1f;
-    --text-dark: #ffffff;
-    --accent-dark: #64D2FF;
+    --bg: #1d1d1f;
+    --text: #ffffff;
+    --accent: #64D2FF;
     --gradient-primary: linear-gradient(135deg, #007AFF 0%, #00C9FF 100%);
     --gradient-secondary: linear-gradient(135deg, #64D2FF 0%, #87CEEB 100%);
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --spacing: 1rem;
     --radius: 16px;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-    --nav-bg: #ffffff;
-    --nav-text: #1d1d1f;
-    --nav-hover: #007AFF;
-    --nav-active: #00C9FF;
-}
-
-[data-theme="dark"] {
-    --bg: var(--bg-dark);
-    --text: var(--text-dark);
-    --accent: var(--accent-dark);
     --nav-bg: #1a1a1a;
     --nav-text: #ffffff;
     --nav-hover: #64D2FF;
     --nav-active: #87CEEB;
-}
-
-[data-theme="light"] {
-    --bg: var(--bg-light);
-    --text: var(--text-light);
-    --accent: var(--accent-light);
 }
 
 [data-theme="dark"] {
@@ -178,6 +159,16 @@ body {
     gap: 2rem;
     align-items: center;
     position: relative;
+    transition: margin-left 0.25s cubic-bezier(.4,2,.6,1), justify-content 0.25s cubic-bezier(.4,2,.6,1);
+}
+
+.nav-links--signed-in {
+    margin-left: auto !important;
+    justify-content: flex-end !important;
+}
+
+.user-icon-btn .fa-user-circle {
+    color: #00d6fe !important;
 }
 
 .nav-links a {
@@ -217,6 +208,22 @@ body {
 
 .nav-links a.active::after {
     width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Shift all nav links except the first to the right to compensate for removed theme toggle */
+/* Consistent small spacing between navbar items */
+.nav-links li:not(:first-child):not(:last-child) {
+    margin-left: 1rem;
+}
+/* Push Sign In to the right edge */
+.nav-links li:last-child {
+    margin-left: auto;
 }
 
 .logo {
@@ -436,7 +443,7 @@ body {
     line-height: 1.5;
     max-width: 600px;
     margin: 1.5rem auto 2.5rem;
-    color: var(--text-light);
+    color: var(--text);
 }
 
 .hero-content .cta-button {
@@ -586,22 +593,23 @@ body {
 }
 
 .price-features {
-    margin: 2rem 0;
-    position: relative;
-    z-index: 1;
+margin: 2rem 0;
+position: relative;
+z-index: 1;
 }
 
 .price-features p {
-    margin: 1rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    position: relative;
-    z-index: 1;
+margin: 1rem 0;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+position: relative;
+z-index: 1;
 }
 
 .price-features i {
-    color: var(--accent);
+color: var(--accent);
+font-size: 1.1rem;
     font-size: 1.1rem;
 }
 
@@ -708,7 +716,7 @@ body {
 
 .tagline {
     font-size: 1.125rem;
-    color: var(--text-light);
+    color: var(--text);
     margin: 1rem 0;
     max-width: 600px;
 }

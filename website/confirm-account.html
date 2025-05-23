@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Confirmed - Stira</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+      body { min-height: 100vh; }
+      .confirm-main {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(359deg, #050b2b 0%, #171925 100%);
+      }
+      .glass-card {
+        background: rgba(34, 37, 56, 0.82);
+        border-radius: 1.2em;
+        padding: 2.5em 2em 2em 2em;
+        box-shadow: 0 4px 32px rgba(24,28,50,0.14);
+        max-width: 370px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+      }
+      .stira-logo {
+        height: 48px;
+        margin-bottom: 1.5rem;
+      }
+      .success-icon {
+        color: #2BFF88;
+        font-size: 2.5em;
+        margin-bottom: 0.7em;
+      }
+      .auth-title {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        font-size: 1.5em;
+        margin-bottom: 0.5em;
+      }
+      .home-link {
+        display: inline-block;
+        margin-top: 2em;
+        padding: 0.8em 2.2em;
+        background: linear-gradient(90deg, #030b35 0%, #000301 100%);
+        color: #171925;
+        font-weight: 600;
+        border-radius: 2em;
+        text-decoration: none;
+        font-size: 1.08em;
+        transition: background 0.2s, color 0.2s;
+        box-shadow: 0 2px 12px rgba(43, 78, 255, 0.08);
+      }
+      .home-link:hover {
+        background: linear-gradient(288deg, #000100 0%, #2B4EFF 100%);
+        color: #171925;
+      }
+      .subtitle {
+        color: #bfc2d1;
+        font-size: 1.08em;
+        margin-bottom: 1.2em;
+      }
+    </style>
+</head>
+<body>
+  <main class="confirm-main">
+    <section class="glass-card">
+      <img src="Stira2eagle.jpg" class="stira-logo" alt="Stira Logo">
+      <div class="success-icon"><i class="fas fa-check-circle"></i></div>
+      <h2 class="auth-title">Account Confirmed!</h2>
+      <div class="subtitle">Your email has been successfully verified.<br>Welcome to Stira!</div>
+      <a href="#" id="home-link" class="home-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.7/dist/umd/supabase.min.js"></script>
+<script>
+
+  
+
+  document.getElementById('home-link').addEventListener('click', async function(e) {
+    e.preventDefault();
+    // Try to get user session
+    const { data: { user } } = await supabase.auth.getUser();
+    // If user is present, redirect to home (will show user icon)
+    // If not, still redirect (will show auth buttons)
+    window.location.href = 'index.html';
+  });
+</script>
+    </section>
+  </main>
+
+</body>
+</html>

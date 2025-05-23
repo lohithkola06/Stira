@@ -10,7 +10,6 @@
 </head>
 <body>
     <!-- Hero Section -->
-    <header class="hero">
         <nav class="navbar">
             <div class="logo">
                 <span class="logo-text">Stira</span>
@@ -18,27 +17,37 @@
             <button class="mobile-nav-toggle">
                 <i class="fas fa-bars"></i>
             </button>
-            <ul class="nav-links">
+            <ul class="nav-links" id="main-nav-links">
                 <li><a href="#overview">Home</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#tech">Tech</a></li>
+                <!-- <li><a href="#tech">Tech</a></li> -->
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact Us</a></li>
-                <li><button class="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button></li>
+                <li class="nav-user-menu" style="display:none;position:relative;">
+  <button id="user-menu-btn" class="user-icon-btn" style="background:none;border:none;outline:none;cursor:pointer;padding:0 0.5em;">
+    <i class="fas fa-user-circle" style="font-size:1.7em;color:#00d6fe;"></i>
+  </button>
+  <div id="user-dropdown" class="user-dropdown" style="display:none;position:absolute;right:0;top:2.5em;background:#23243a;color:#fff;border-radius:0.8em;box-shadow:0 2px 12px rgba(24,28,50,0.18);padding:1.1em 1.5em;min-width:220px;z-index:1001;">
+    <div class="user-email" style="font-weight:600;margin-bottom:0.3em;"></div>
+    <div class="user-name" style="font-size:0.98em;color:#bfc2d1;margin-bottom:1em;"></div>
+    <button id="signout-btn" style="background:#2B4EFF;color:#fff;border:none;border-radius:0.5em;padding:0.5em 1.3em;font-weight:600;cursor:pointer;width:100%;">Sign Out</button>
+  </div>
+</li>
+<li><a href="signup.html" class="cta-button secondary nav-auth-link" style="margin-left: 0.5rem;">Sign Up</a></li>
+<li><a href="signin.html" class="cta-button primary nav-auth-link" style="margin-left: 0.5rem;">Sign In</a></li>
+                
             </ul>
         </nav>
         <nav class="mobile-nav">
             <ul>
                 <li><a href="#overview">Home</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#tech">Tech</a></li>
+                <!-- <li><a href="#tech">Tech</a></li> -->
                 <li><a href="#pricing">Pricing</a></li>
                 <li><a href="#contact">Contact Us</a></li>
-                <li><button class="theme-toggle">
-                    <i class="fas fa-moon"></i>
-                </button></li>
+                <li><a href="signup.html" class="cta-button secondary" style="margin: 0.5rem 0;">Sign Up</a></li>
+                <li><a href="signin.html" class="cta-button primary" style="margin: 0.5rem 0;">Sign In</a></li>
+                
             </ul>
         </nav>
         <div class="hero-content">
@@ -121,7 +130,7 @@
                         <h3>Address</h3>
                         <p>International Institute of Information Technology</p>
                         <p>Prof. C.R. Rao Road, Gachibowli</p>
-                        <p>Hyderabad 500 032, Telangana, India</p>
+                        <p>Hyderabad 500032, Telangana, India</p>
                     </div>
                     <div class="contact-item">
                         <i class="fas fa-phone"></i>
@@ -223,100 +232,6 @@
 
     <div class="section-separator"></div>
 
-    <!-- Technology Section -->
-    <section class="technology" id="tech">
-        <div class="technology-container">
-            <h2>Advanced Technology</h2>
-            <p class="tech-description">Stira is powered by cutting-edge AI and machine learning technologies designed to enhance your digital experience.</p>
-            
-            <!-- AI Architecture -->
-            <div class="tech-grid">
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-brain"></i>
-                    </div>
-                    <h3>AI Architecture</h3>
-                    <p>State-of-the-art neural networks that understand context and intent in real-time.</p>
-                    <div class="tech-features">
-                        <p><i class="fas fa-check"></i> Natural Language Processing</p>
-                        <p><i class="fas fa-check"></i> Context-Aware Analysis</p>
-                        <p><i class="fas fa-check"></i> Real-Time Learning</p>
-                    </div>
-                </div>
-
-                <!-- Computer Vision -->
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Computer Vision</h3>
-                    <p>Advanced screen analysis and DOM parsing to understand your digital environment.</p>
-                    <div class="tech-features">
-                        <p><i class="fas fa-check"></i> Screen Content Analysis</p>
-                        <p><i class="fas fa-check"></i> Element Recognition</p>
-                        <p><i class="fas fa-check"></i> Context Detection</p>
-                    </div>
-                </div>
-
-                <!-- ML Models -->
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-magic"></i>
-                    </div>
-                    <h3>Machine Learning Models</h3>
-                    <p>Custom-trained models that adapt to your preferences and optimize over time.</p>
-                    <div class="tech-features">
-                        <p><i class="fas fa-check"></i> Personalization</p>
-                        <p><i class="fas fa-check"></i> Behavior Analysis</p>
-                        <p><i class="fas fa-check"></i> Adaptive Learning</p>
-                    </div>
-                </div>
-
-                <!-- Security -->
-                <div class="tech-card">
-                    <div class="tech-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Secure Processing</h3>
-                    <p>End-to-end encryption and privacy-first design to protect your data.</p>
-                    <div class="tech-features">
-                        <p><i class="fas fa-check"></i> Local Processing</p>
-                        <p><i class="fas fa-check"></i> Data Privacy</p>
-                        <p><i class="fas fa-check"></i> Secure Connections</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Performance Stats -->
-            <div class="performance-stats">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Real-Time Processing</h3>
-                    <p class="stat-number">99.9%</p>
-                    <p class="stat-label">Accuracy</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Response Time</h3>
-                    <p class="stat-number">< 100ms</p>
-                    <p class="stat-label">Average</p>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <i class="fas fa-sync"></i>
-                    </div>
-                    <h3>Learning Rate</h3>
-                    <p class="stat-number">+5%</p>
-                    <p class="stat-label">Monthly Improvement</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -348,5 +263,70 @@
 
     <script src="js/script.js"></script>
     <script src="js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.7/dist/umd/supabase.min.js"></script>
+<script>
+// User menu logic with Supabase
+const SUPABASE_URL = 'https://yfhzcvikolcbgbaopyrj.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmaHpjdmlrb2xjYmdiYW9weXJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc0MDIwNDIsImV4cCI6MjA2Mjk3ODA0Mn0.u4r_RWjIoJiv-flUZySWIKA-tJsaCd1tN5S_yGa0h3s';
+const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+function showUserMenu(user) {
+  const navLinks = document.getElementById('main-nav-links');
+  if (navLinks) navLinks.classList.add('nav-links--signed-in');
+  document.querySelectorAll('.nav-auth-link').forEach(el => el.style.display = 'none');
+  const menu = document.querySelector('.nav-user-menu');
+  if (menu) menu.style.display = '';
+  const dropdown = document.getElementById('user-dropdown');
+  if (dropdown) {
+    dropdown.querySelector('.user-email').textContent = user.email || '';
+    dropdown.querySelector('.user-name').textContent = user.user_metadata?.full_name || '';
+  }
+}
+function hideUserMenu() {
+  const navLinks = document.getElementById('main-nav-links');
+  if (navLinks) navLinks.classList.remove('nav-links--signed-in');
+  document.querySelectorAll('.nav-auth-link').forEach(el => el.style.display = '');
+  const menu = document.querySelector('.nav-user-menu');
+  if (menu) menu.style.display = 'none';
+}
+
+async function checkUser() {
+  const { data: { user } } = await supabase.auth.getUser();
+  if (user) {
+    showUserMenu(user);
+  } else {
+    hideUserMenu();
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  checkUser();
+
+  // User icon click toggles dropdown
+  const userBtn = document.getElementById('user-menu-btn');
+  const dropdown = document.getElementById('user-dropdown');
+  if (userBtn && dropdown) {
+    userBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+    // Hide dropdown on outside click
+    document.addEventListener('click', function(e) {
+      if (!dropdown.contains(e.target) && e.target !== userBtn) {
+        dropdown.style.display = 'none';
+      }
+    });
+  }
+
+  // Sign out logic
+  const signoutBtn = document.getElementById('signout-btn');
+  if (signoutBtn) {
+    signoutBtn.addEventListener('click', async function() {
+      await supabase.auth.signOut();
+      window.location.reload();
+    });
+  }
+});
+</script>
 </body>
 </html>

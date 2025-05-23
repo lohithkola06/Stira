@@ -1,0 +1,29 @@
+Here's a breakdown of the color scheme used on index.html:
+
+Light Theme
+Primary Background: #ffffff (White)
+Text Color: #1d1d1f (Dark Gray/Black)
+Primary Accent: #007AFF (Bright Blue)
+Secondary Accent: #00C9FF (Light Blue)
+Dark Theme
+Primary Background: #1d1d1f (Dark Gray/Black)
+Text Color: #ffffff (White)
+Primary Accent: #64D2FF (Light Blue)
+Secondary Accent: #87CEEB (Sky Blue)
+Gradients
+Primary Gradient: linear-gradient(135deg, #007AFF 0%, #00C9FF 100%) (Blue to Light Blue)
+Secondary Gradient: linear-gradient(135deg, #64D2FF 0%, #87CEEB 100%) (Light Blue to Sky Blue)
+Navigation
+Nav Background (Light): #ffffff (White)
+Nav Text (Light): #1d1d1f (Dark Gray/Black)
+Nav Hover (Light): #007AFF (Bright Blue)
+Nav Active (Light): #00C9FF (Light Blue)
+Nav Background (Dark): #1a1a1a (Darker Gray)
+Nav Text (Dark): #ffffff (White)
+Nav Hover (Dark): #64D2FF (Light Blue)
+Nav Active (Dark): #87CEEB (Sky Blue)
+Additional UI Elements
+Box Shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1)
+Border Radius: 16px (for cards and containers)
+Transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) (for smooth hover effects)
+The design follows a clean, modern aesthetic with a blue color scheme that conveys trust and professionalism. The dark theme inverts the colors for better readability in low-light conditions, while maintaining visual hierarchy and brand consistency.

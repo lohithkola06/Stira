@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Stira</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.7/dist/umd/supabase.min.js"></script>
+<script src="js/authentication.js"></script>
+<script>
+// Attach Google OAuth handler after DOM loads
+  document.addEventListener('DOMContentLoaded', function() {
+    var googleBtn = document.getElementById('google-signin-btn');
+    if (googleBtn) {
+      googleBtn.addEventListener('click', async function() {
+        const supabase = window.supabase.createClient(
+          'https://yfhzcvikolcbgbaopyrj.supabase.co',
+          'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlmaHpjdmlrb2xjYmdiYW9weXJqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc0MDIwNDIsImV4cCI6MjA2Mjk3ODA0Mn0.u4r_RWjIoJiv-flUZySWIKA-tJsaCd1tN5S_yGa0h3s'
+        );
+        const { data, error } = await supabase.auth.signInWithOAuth({
+          provider: 'google',
+          options: {
+            redirectTo: window.location.origin + '/website/index.html'
+          }
+        });
+        if (error) {
+          alert('Google sign-in error: ' + error.message);
+        }
+      });
+    }
+  });
+</script>
+<style>
+.auth-navbar__button {
+  color: #64d2ff !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16.96px !important;
+  font-weight: 500 !important;
+  background: transparent !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  letter-spacing: normal !important;
+  word-spacing: 0px !important;
+  line-height: 27.136px !important;
+  vertical-align: baseline !important;
+  border-radius: 2em !important;
+  padding: 0.7em 2.1em !important;
+}
+</style>
+</head>
+<body>
+    <nav class="auth-navbar sexy-auth-navbar">
+      <div class="auth-navbar__logo">
+        <span class="logo-text">Stira</span>
+      </div>
+      <div class="auth-navbar__links" style="margin-left: 2.5em;">
+        <a href="index.html" class="auth-navbar__link">Home</a>
+        <a href="signup.html" class="auth-navbar__button auth-navbar__button--secondary">Sign Up</a>
+        <a href="signin.html" class="auth-navbar__button auth-navbar__button--primary">Sign In</a>
+      </div>
+    </nav>
+
+    <main class="auth-main gradient-bg">
+      <svg class="wave-bg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="fadeMask" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="white" stop-opacity="1"/>
+      <stop offset="30%" stop-color="white" stop-opacity="0"/>
+      <stop offset="70%" stop-color="white" stop-opacity="0"/>
+      <stop offset="100%" stop-color="white" stop-opacity="1"/>
+    </linearGradient>
+    <mask id="sideFade">
+      <rect x="0" y="0" width="1440" height="320" fill="url(#fadeMask)" />
+    </mask>
+  </defs>
+  <path mask="url(#sideFade)" fill="#171925" fill-opacity="1" d="M0,96L60,101.3C120,107,240,117,360,149.3C480,181,600,235,720,229.3C840,224,960,160,1080,154.7C1200,149,1320,203,1380,229.3L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+</svg>
+    <section class="glass-card">
+  <img src="Stira2eagle.jpg" class="stira-logo" alt="Stira Logo" style="height:44px;margin-bottom:1.5rem;">
+  <h2 class="auth-title">Sign in to Stira</h2>
+  <div class="google-auth-btn-wrapper">
+    <button class="google-auth-btn" type="button" id="google-signin-btn">
+  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align:middle;margin-right:0.5em;"><g><path d="M19.6 10.23c0-.68-.06-1.36-.17-2H10v3.79h5.48c-.24 1.28-.97 2.37-2.07 3.09v2.56h3.35c1.96-1.8 3.09-4.45 3.09-7.44z" fill="#4285F4"/><path d="M10 20c2.7 0 4.97-.89 6.63-2.41l-3.35-2.56c-.93.63-2.12 1-3.28 1-2.52 0-4.66-1.7-5.42-3.98H1.1v2.61C2.82 17.98 6.13 20 10 20z" fill="#34A853"/><path d="M4.58 12.05A5.98 5.98 0 0 1 4.06 10c0-.71.12-1.4.32-2.05V5.34H1.1A9.98 9.98 0 0 0 0 10c0 1.64.39 3.19 1.1 4.66l3.48-2.61z" fill="#FBBC05"/><path d="M10 4c1.48 0 2.8.51 3.85 1.51l2.89-2.89C14.97 1.17 12.7 0 10 0 6.13 0 2.82 2.02 1.1 5.34l3.48 2.61C5.34 5.7 7.48 4 10 4z" fill="#EA4335"/></g></svg>
+  Sign in With Google
+</button>
+  </div>
+  <div class="auth-divider"><span>or</span></div>
+  <form class="auth-form" id="signin-form">
+    <div class="form-group">
+      <label for="signin-email">Work email</label>
+      <input type="email" id="signin-email" name="email" required placeholder="work@company.com" autocomplete="email">
+    </div>
+    <div class="form-group">
+      <label for="signin-password">Password</label>
+      <input type="password" id="signin-password" name="password" required placeholder="••••••••" autocomplete="current-password">
+    </div>
+    <button type="submit" class="cta-button gradient-btn large" style="width:100%;margin-top:1.2rem;">
+      <span class="button-text">Continue</span>
+      <span class="button-loader" style="display:none;margin-left:8px;">
+        <i class="fas fa-spinner fa-spin"></i>
+      </span>
+    </button>
+    <div id="signin-error-msg" style="display:none;color:#ff3b3b;text-align:center;margin-top:1.2rem;font-weight:500;padding:8px;background:rgba(255,59,59,0.1);border-radius:4px;"></div>
+  </form>
+  <div class="auth-switch" style="margin-top:1.4rem;">Don't have an account? <a href="signup.html">Sign up</a></div>
+  <div class="auth-switch"><a href="reset-password.html">Forgot password?</a></div>
+  <div style="color:#bfc2d1;font-size:0.97em;text-align:center;margin-top:1.4em;line-height:1.4;">By signing in, you acknowledge that you have read and understood, and agree to Stira's <a href="#" style="color:#2B4EFF;">Terms</a> and <a href="#" style="color:#2B4EFF;">Privacy Policy</a>.</div>
+</section>
+  </main>
+    </main>
+
+</body>
+</html>

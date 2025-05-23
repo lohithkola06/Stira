@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Your Email - Stira</title>
+    <link rel="stylesheet" href="css/auth.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.39.7/dist/umd/supabase.min.js"></script>
+<script src="js/authentication.js"></script>
+<style>
+.auth-navbar__button {
+  color: #64d2ff !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 16.96px !important;
+  font-weight: 500 !important;
+  background: transparent !important;
+  text-transform: none !important;
+  text-decoration: none !important;
+  letter-spacing: normal !important;
+  word-spacing: 0px !important;
+  line-height: 27.136px !important;
+  vertical-align: baseline !important;
+  border-radius: 2em !important;
+  padding: 0.7em 2.1em !important;
+}
+</style>
+</head>
+<body>
+
+
+    <nav class="auth-navbar sexy-auth-navbar">
+      <div class="auth-navbar__logo">
+        <span class="logo-text">Stira</span>
+      </div>
+      <div class="auth-navbar__links" style="margin-left: 2.5em;">
+        <a href="index.html" class="auth-navbar__link">Home</a>
+        <a href="signup.html" class="auth-navbar__button auth-navbar__button--secondary">Sign Up</a>
+        <a href="signin.html" class="auth-navbar__button auth-navbar__button--primary">Sign In</a>
+      </div>
+    </nav>
+
+    <main class="auth-main gradient-bg">
+      <svg class="wave-bg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="fadeMask" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%" stop-color="white" stop-opacity="1"/>
+            <stop offset="30%" stop-color="white" stop-opacity="0"/>
+            <stop offset="70%" stop-color="white" stop-opacity="0"/>
+            <stop offset="100%" stop-color="white" stop-opacity="1"/>
+          </linearGradient>
+          <mask id="sideFade">
+            <rect x="0" y="0" width="1440" height="320" fill="url(#fadeMask)" />
+          </mask>
+        </defs>
+        <path mask="url(#sideFade)" fill="#171925" fill-opacity="1" d="M0,96L60,101.3C120,107,240,117,360,149.3C480,181,600,235,720,229.3C840,224,960,160,1080,154.7C1200,149,1320,203,1380,229.3L1440,256L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+      </svg>
+      <section class="glass-card fade-in" style="animation: fadeIn 1.1s cubic-bezier(.4,0,.2,1);">
+        <img src="Stira2eagle.jpg" class="stira-logo" alt="Stira Logo" style="height:44px;margin-bottom:1.5rem;">
+        <div class="modern-envelope-animation" style="margin-bottom:1.5rem;">
+  <svg class="envelope-svg" width="120" height="96" viewBox="0 0 120 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Envelope Body -->
+    <rect x="10" y="32" width="100" height="48" rx="10" fill="#fff" stroke="#00d6fe" stroke-width="2"/>
+    <!-- Envelope Flap -->
+    <polygon class="flap" points="10,32 60,8 110,32" fill="#00d6fe"/>
+    <!-- Paper -->
+    <rect class="paper" x="24" y="40" width="72" height="36" rx="4" fill="#f7faff" stroke="#00d6fe" stroke-width="1.5"/>
+    <!-- Checkmark -->
+    <polyline class="checkmark" points="45,60 56,70 75,50" fill="none" stroke="#2BFF88" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <!-- Sparkles -->
+    <g class="sparkles">
+      <circle cx="30" cy="28" r="2" fill="#00d6fe"/>
+      <circle cx="90" cy="20" r="1.5" fill="#2BFF88"/>
+      <circle cx="60" cy="18" r="1.8" fill="#fff"/>
+    </g>
+  </svg>
+</div>
+<style>
+  .modern-envelope-animation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90px;
+    position: relative;
+    animation: floaty 3.6s ease-in-out infinite alternate;
+  }
+  .envelope-svg {
+    width: 120px;
+    height: 96px;
+    display: block;
+  }
+  /* Flap opening animation */
+  .envelope-svg .flap {
+    transform-origin: 60px 32px;
+    animation: flapOpen 1.2s cubic-bezier(.8,0,.2,1) 0.5s forwards;
+  }
+  @keyframes flapOpen {
+    from { transform: rotateX(0deg); }
+    to   { transform: rotateX(-75deg); }
+  }
+  /* Paper sliding out */
+  .envelope-svg .paper {
+    transform: translateY(28px);
+    opacity: 0;
+    animation: paperSlide 1.1s cubic-bezier(.6,0,.3,1) 1.1s forwards;
+  }
+  @keyframes paperSlide {
+    from { transform: translateY(28px); opacity: 0; }
+    40%  { opacity: 1; }
+    to   { transform: translateY(0); opacity: 1; }
+  }
+  /* Checkmark drawing */
+  .envelope-svg .checkmark {
+    stroke-dasharray: 44;
+    stroke-dashoffset: 44;
+    animation: checkDraw 0.7s cubic-bezier(.6,0,.3,1) 2.2s forwards;
+  }
+  @keyframes checkDraw {
+    to { stroke-dashoffset: 0; }
+  }
+  /* Sparkles pop in */
+  .envelope-svg .sparkles circle {
+    opacity: 0;
+    transform: scale(0.5);
+    animation: sparklePop 0.4s cubic-bezier(.7,0,.3,1) 2.5s forwards;
+  }
+  .envelope-svg .sparkles circle:nth-child(2) { animation-delay: 2.7s; }
+  .envelope-svg .sparkles circle:nth-child(3) { animation-delay: 2.9s; }
+  @keyframes sparklePop {
+    to { opacity: 1; transform: scale(1.1); }
+  }
+  /* Floating animation */
+  @keyframes floaty {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-12px); }
+  }
+</style>
+
+        <h2 class="auth-title gradient-text fade-in" style="animation-delay:0.15s;">Check Your Email</h2>
+        <p class="auth-message fade-in" style="margin-bottom:1.5em;animation-delay:0.25s;">We've sent a confirmation link to your email address.<br> Please check your inbox and follow the instructions to continue.</p>
+        <a class="cta-button gradient-btn large fade-in" style="animation-delay:0.4s;" href="index.html">Back to Home</a>
+      </section>
+    </main>
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(24px); }
+        to { opacity: 1; transform: none; }
+      }
+      .fade-in {
+        opacity: 0;
+        animation: fadeIn 1.1s cubic-bezier(.4,0,.2,1) forwards;
+      }
+      .fade-in[style*="animation-delay"] {
+        animation-fill-mode: both;
+      }
+      /* Ensure fade-in stays visible after animation */
+      .fade-in {
+        animation-fill-mode: forwards !important;
+      }
+    </style>
+
+</body>
+</html>

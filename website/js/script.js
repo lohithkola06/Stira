@@ -1,25 +1,7 @@
-// Theme Switching
 document.addEventListener('DOMContentLoaded', () => {
-    const themeToggle = document.querySelector('.theme-toggle');
-    const html = document.documentElement;
-    const icon = themeToggle.querySelector('i');
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const mobileNav = document.querySelector('.mobile-nav');
     const navLinks = document.querySelectorAll('.nav-links a');
-
-    // Check system preference
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        html.setAttribute('data-theme', 'dark');
-        icon.className = 'fas fa-sun';
-    }
-
-    // Theme toggle
-    themeToggle.addEventListener('click', () => {
-        const currentTheme = html.getAttribute('data-theme');
-        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-        html.setAttribute('data-theme', newTheme);
-        icon.className = newTheme === 'light' ? 'fas fa-moon' : 'fas fa-sun';
-    });
 
     // Mobile navigation
     mobileNavToggle.addEventListener('click', () => {
@@ -33,29 +15,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Smooth scrolling and active nav
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
             const targetId = link.getAttribute('href');
-            const targetSection = document.querySelector(targetId);
-
-            // Remove active class from all links
-            navLinks.forEach(l => l.classList.remove('active'));
-            
-            // Add active class to clicked link
-            link.classList.add('active');
-
-            // Smooth scroll to target
-            targetSection.scrollIntoView({
-                behavior: 'smooth'
-            });
-
-            // Close mobile nav if open
-            mobileNav.classList.remove('active');
+            // Only handle anchor links (starting with #)
+            if (targetId.startsWith('#')) {
+                e.preventDefault();
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    link.classList.add('active');
+    
+                    // Smooth scroll to target
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+    
+                    // Close mobile nav if open
+                    mobileNav.classList.remove('active');
+                }
+            }
+            // Regular links (like signup.html, signin.html) will work normally
         });
     });
-});
+}); // <-- Properly close the DOMContentLoaded event listener
 
 // Update active nav link based on scroll position
 window.addEventListener('scroll', () => {
